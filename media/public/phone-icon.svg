@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Ebene_2" data-name="Ebene 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 43.6 43.6">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #FFF;
+        stroke-width: 0px;
+      }
+    </style>
+    <linearGradient id="Eau_7" data-name="Eau 7" x1="2.29" y1="3.25" x2="36.73" y2="44.3" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#69afe0"/>
+      <stop offset=".1" stop-color="#5facde"/>
+      <stop offset=".26" stop-color="#46a6db"/>
+      <stop offset=".46" stop-color="#1d9bd6"/>
+      <stop offset=".58" stop-color="#0094d3"/>
+      <stop offset="1" stop-color="#007fc3"/>
+    </linearGradient>
+  </defs>
+  <g id="Calque_187_-_copie" data-name="Calque 187 - copie">
+    <g id="Calque_4_-_copie" data-name="Calque 4 - copie">
+      <g id="Calque_15_-_copie" data-name="Calque 15 - copie">
+        <path class="cls-1" d="m42.16,33.36c-.7-.58-3.2-1.67-5.04-2.98-1.84-1.31-3.03-2.5-4.2-2.56-1.17-.06-2.61,2.18-4.15,3.94-1.54,1.76-1.12,2.17-4.2.75s-7.6-5.88-7.6-5.88c0,0-4.46-4.53-5.88-7.6-1.42-3.07-1.01-2.66.75-4.2,1.76-1.54,4-2.98,3.94-4.15-.06-1.17-1.25-2.37-2.56-4.2-1.31-1.84-2.4-4.34-2.98-5.04s-1.1-2.04-3.35-1.15C4.65,1.2.08,3.75,0,8.84s2.73,14.12,11.69,23.07c8.95,8.95,17.98,11.76,23.07,11.69,5.09-.07,7.64-4.64,8.54-6.89.9-2.25-.45-2.77-1.15-3.35Z"/>
+      </g>
+    </g>
+  </g>
+</svg>

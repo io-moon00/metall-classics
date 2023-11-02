@@ -1,0 +1,19 @@
+.about-content{
+    display: flex;
+    gap: 60px;
+    align-items: center;
+}
+
+.about-content img{
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: solid 2px var(--main-color);
+}
+
+@media(max-width: 700px){
+    .about-content{
+        flex-direction: column-reverse;
+    }
+}

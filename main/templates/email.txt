@@ -1,0 +1,10 @@
+You have received a message via the contact form of your website!
+
+The message comes from: 
+      Title: {{ salutation }}
+      First name: {{ prename }}
+      Last name: {{ name }}
+      E-mail: {{ email }}
+  
+  	Message:
+    {{ message }}

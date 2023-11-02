@@ -1,0 +1,49 @@
+<div class="section">
+    <div class="title">
+        <div class="vertical_line"></div>
+        <h2>Kontakt</h2>
+        <div class="vertical_line"></div>
+    </div>
+    <div class="contact-content">
+        <div class="contact-info-container">
+            <div class="contact-info">
+                <img src="../../../media/public/location-icon.svg" alt="location icon">
+                <div>
+                    <h4>Adresse:</h4>
+                    <div>Hauptstrasse 89 </br>4437 Waldenburg </div>
+                </div>
+            </div>
+
+            <div class="contact-info">
+                <img src="../../../media/public/email-icon.svg" alt="email icon">
+                <div>
+                    <h4>Email:</h4>
+                    <a href="mailto:craft@metall-classics.ch">craft@metall-classics.ch</a>
+                </div>
+            </div>
+
+            <div class="contact-info">
+                <img src="../../../media/public/phone-icon.svg" alt="phone icon">
+                <div>
+                    <h4>Telefonnummer:</h4>
+                    <a href="tel:41799250144">+41 79 400 76 01</a>
+                </div>
+            </div>
+
+            <div class="contact-info">
+                <img src="../../../media/public/web-icon.svg" alt="web icon">
+                <div>
+                    <h4>Internet:</h4>
+                    <a href="https://metall-classics.ch">www.metall-classics.ch</a>
+                </div>
+            </div>
+        </div>
+        <div class="contact-form">
+            <form method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+                  <button class="primary-button" type="submit">Absenden</button>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+
+{% block style %}
+<link rel="stylesheet" href="../static/style/home.css">
+<link rel="stylesheet" href="../static/style/offers.css">
+<link rel="stylesheet" href="../static/style/about.css">
+<link rel="stylesheet" href="../static/style/gallery.css">
+<link rel="stylesheet" href="../static/style/blog.css">
+<link rel="stylesheet" href="../static/style/contact.css">
+{% endblock %}
+
+{% block content %}
+<div class="bg1">
+    <h1 class="slogan">Dein Partner für Karosseriearbeiten an historischen Fahrzeugen</h1>
+    <div class="subtitle">Wir sind ein Familienbetrieb, der professionelle Autoreparaturen und -wartungen in einer freundlichen Atmosphäre anbietet.</div>
+    <div class="buttons">
+        <a class="primary-button" href="{% url 'home' %}#contact">Kontakt</a>
+        <a class="secondary-button" href="{% url 'home' %}#about">Über mich</a>
+    </div> 
+</div>
+<div class="sections">
+    <section id="offer">{% include 'sections/offer.html' %}</section>
+    <section id="about">{% include 'sections/about.html' %}</section>
+    <section id="gallery">{% include 'sections/gallery.html' %}</section>
+    <section id="blog">{% include 'sections/blog.html' %}</section>
+    <section id="contact">{% include 'sections/contact.html' %}</section>
+</div>
+{% endblock %}

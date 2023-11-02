@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block style %}
+<link rel="stylesheet" href="../static/style/blog.css">
+{% endblock %}
+
+{% block content %}
+<div class="wrapper">
+    <img class="header-img" src="{{ blog.img.url }}" alt="{{ blog.img_alt }}">
+    <div class="title page-title">
+        <div class="vertical_line"></div>
+        <h2>{{ blog.title }}</h2>
+        <div class="vertical_line"></div>
+    </div>
+    <div class="page blog">
+        <div class="detail-text">
+            <div class="info">{{ blog.tag }} | {{ blog.date | date:"d.m.Y" }}</div>
+            <div class="detail-text">
+                {{ blog.text }}
+            </div>
+        </div>
+        <div class="blog-gallery">
+            {% for img in images %}
+            <img src="{{ img.img.url }}" alt="{{ img.img_alt }}">
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock %}

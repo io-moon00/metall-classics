@@ -1,0 +1,235 @@
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100px;
+    padding-top: 20px;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    -webkit-backdrop-filter: blur(2em);
+    backdrop-filter: blur(2em);
+    background-color: rgba(0, 0, 0, 0.808);
+    z-index: 100;
+}
+
+.logo{
+    width: 100px;
+}
+
+header ul{
+    list-style: none;
+    padding-inline-start: 0;
+    display: flex;
+    gap: 20px;
+}
+
+nav{
+    display: flex;
+    justify-content: right;
+}
+
+nav a{
+    position: relative;
+    text-decoration: none;
+    color: white;
+}
+
+nav a::after{
+    content: '';
+    height: 2px;
+    width: 0;
+    padding: 0;
+    background-color: var(--main-color);
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    bottom: -5px;
+    border-radius: 5px;
+}
+
+nav a:hover::after{
+    width: 85%;
+    transition: all var(--transition-time) ease-in-out;
+}
+
+
+
+@media (max-width: 720px){
+
+    .metall{
+        font-size: 30px;
+    }
+
+    .classics{
+        font-size: 35px;
+    }
+
+    .nav a{
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 550px){
+    .hide{
+        display: none;
+    }
+
+    .menu-img{
+        display: unset;
+        width: 40px;
+        
+    }
+
+    .header-img{
+        height: 150px;
+    }
+}
+
+
+
+.nav-links{
+    display: flex;
+    gap: 20px;
+    text-transform: uppercase;
+    font-size: 16px;
+  }
+  
+  .nav-links a{
+    position: relative;
+  }
+  
+  .nav-links a::after {
+    content: '';
+    height: 2px;
+    width: 0;
+    padding: 0;
+    background-color: var(--main-color);
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    bottom: -5px;
+    border-radius: 5px;
+  }
+  
+  .nav-links a:hover::after {
+    width: 85%;
+    transition: all 125ms ease-in-out;
+  }
+  
+
+  
+#navbar-btn {
+    height: 35px;
+    width: 35px;
+    margin: auto;
+    border-radius: 10px;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    display: none;
+    transition: all 225ms ease-in-out;
+  }
+  
+  #btn-icon,
+  #btn-icon::before,
+  #btn-icon::after {
+    position: absolute;
+    content: '';
+    height: 3px;
+    width: 25px;
+    margin: auto;
+    background-color: white;
+    border-radius: 5px;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    transition: all 225ms ease-in-out;
+  }
+  
+  #btn-icon::before {
+    content: '';
+    transform: translateY(-8px);
+  }
+  
+  #btn-icon::after {
+    content: '';
+    transform: translateY(8px);
+  }
+  
+  #btn-icon.open {
+    transform: translateX(50px);
+    background: transparent;
+  }
+  
+  #btn-icon.open::before {
+    transform: rotate(-45deg) translate(-35px, -35px);
+  }
+  
+  #btn-icon.open::after {
+    transform: rotate(45deg) translate(-35px, 35px);
+  }
+  
+  @media(max-width: 870px){
+    #navbar-btn {
+        display: block;
+        visibility: visible;
+    }
+  
+    #navbar-btn:hover {
+        transform: scale(1.1);
+    }
+  
+    .divider{
+      display: none;
+    }
+  
+    .nav-links {
+        box-sizing: border-box;
+        width: 0;
+        height: calc(100vh - 120px);
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-end;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        margin-top: 120px;
+        background-color: rgba(0, 0, 0, 0.918);
+        overflow-x: hidden;
+        transition: all 225ms ease-in-out;
+        overflow-y: auto;
+    }
+ 
+    .nav-links.open {
+        width: 80%;
+        padding-right: 60px;
+        backdrop-filter: blur(8px);
+    }
+  
+    .nav-links a{
+        font-size: large;
+        margin: 8px;
+        text-align: right;
+        transform: translateX(500px);
+        transition: all 225ms ease-in-out;
+    }
+  
+    .nav-links.open a {
+        transform: translateX(0);
+    }
+  
+    nav{
+        padding-bottom: 0;
+        height: unset;
+    }
+  }
+

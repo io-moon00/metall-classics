@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/style/generalStyle.css">
+    <link rel="stylesheet" href="https://use.typekit.net/kud5mgt.css">
+    <link rel="stylesheet" href="../static/style/headerStyle.css">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="../../media/public/favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../media/public/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../media/public/favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="../../media/public/favicon_io/site.webmanifest">
+
+    {% block style %}
+    {% endblock %}
+
+    <script src="../static/scripts/init.js"></script>
+    
+    <title>Metall Classics</title>
+</head>
+<body id="body" onload="init()">
+    <header>
+        <img class="logo" src="../../media/public/Logo.svg" alt="Metall Classics Logo">
+        <nav>
+            <div class="nav-links">
+                <a href="{% url 'home' %}#offer">Dienstleistungen</a>
+                <a href="{% url 'home' %}#about">Über mich</a>
+                <a href="{% url 'home' %}#gallery">Gallerie</a>
+                <a href="{% url 'home' %}#blog">Blog</a>
+                <a href="{% url 'home' %}#contact">Kontakt</a>
+            </div>
+            <div id="navbar-btn" onclick="toggleNavbar()" href="#">
+                <div id="btn-icon" class=""></div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        {% block content %}
+        {% endblock %} 
+    </main>
+    <footer>
+
+    </footer>
+</body>
+</html>

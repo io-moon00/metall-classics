@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block style %}
+<link rel="stylesheet" href="../static/style/gallery.css">
+{% endblock %}
+
+{% block content %}
+<div class="wrapper">
+    <img class="header-img" src="../../media/public/DSC07193.JPG" alt="{{ blog.img_alt }}">
+    <div class="title  page-title">
+        <div class="vertical_line"></div>
+        <h2>Gallerie</h2>
+        <div class="vertical_line"></div>
+    </div>
+    <div class="page">
+        <div class="section">
+
+            <div class="gallery-images">
+                {% for img in images %}
+                <img src="{{ img.img.url }}" alt="{{ img.img_alt }}">
+                {% endfor %}
+            </div>
+        </div>
+    </div>  
+</div>
+{% endblock %}

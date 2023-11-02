@@ -1,0 +1,45 @@
+.footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    background-color: #545454;
+    color: white;
+    padding-right: 10%;
+    padding-left: 10%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+
+.legal a{
+    text-decoration: none;
+    color: white;
+    margin-left: 10px;  
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 225ms ease-in-out; 
+}
+
+.legal a:hover{
+    border-bottom: 2px solid white;
+    transition: all 225ms ease-in-out;
+}
+
+@media (max-width: 550px){
+
+    .legal{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .legal a{
+        font-size: 12px;
+        margin-top: 2px;
+        margin-bottom: 2px;
+    }
+
+    .copyright{
+        font-size: 12px;
+    }
+}
