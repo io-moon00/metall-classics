@@ -1,26 +1,34 @@
 {% extends 'base.html' %}
 
+{% block page %}'blog'{% endblock %}
+
 {% block style %}
-<link rel="stylesheet" href="../static/style/contact.css">
+<link rel="stylesheet" href="../static/style/blog.css">
 {% endblock %}
 
 {% block content %}
-<div class="section">
-    <div class="title">
+<div class="wrapper">
+    <img class="header-img" src="{{ page.hero.url }}" alt="{{ page.hero_alt }}" style="object-position: {{ page.vert_position }} {{ page.hori_position }};">
+    <div class="title  page-title">
         <div class="vertical_line"></div>
-        <h2>Blog</h2>
+        <h2>{{ page.title }}</h2>
         <div class="vertical_line"></div>
     </div>
-    <div class="blogs">
-        {% for blog in blogs %}
-        <div class="blog">
-            <img src="../../../media/public/DSC07193.JPG" alt="">
-            <div class="info">News | 22. September 2023</div>
-            <h4>How to Tell You need Engine Repair</h4>
-            <div class="text">The car engine is the heart of any car, so to keep your car running you should order a quick repair. At first, you have to choose a</div>
-            <a href="{% url 'blog_detail' blog.id }">mehr..</a>
+    <div class="page">
+        <div class="section">
+            <div class="all-blogs">
+                {% for blog in blogs %}
+                 <div class="blog">
+                     <img src="{{ blog.img.url }}" alt="{{ blog.img_alt }}">
+                     <div class="info">{{ blog.tag }} | {{ blog.date | date:"d.m.Y" }}</div>
+                     <h4>{{ blog.title }}</h4>
+                     <div class="text">{{ blog.text }}</div>
+                     <a href="{% url 'blog_detail' blog.id %}">mehr..</a>
+                 </div>
+                 {% endfor %}
+             </div>
         </div>
-        {% endfor %}
-    </div>
+    </div> 
+    <div class="fullscreen-container"></div> 
 </div>
 {% endblock %}

@@ -1,3 +1,4 @@
+
 <div class="section">
     <div class="title">
         <div class="vertical_line"></div>
@@ -5,7 +6,7 @@
         <div class="vertical_line"></div>
     </div>
     <div class="blogs">
-        {% for blog in blogs %}
+       {% for blog in blogs %}
         <div class="blog">
             <img src="{{ blog.img.url }}" alt="{{ blog.img_alt }}">
             <div class="info">{{ blog.tag }} | {{ blog.date | date:"d.m.Y" }}</div>

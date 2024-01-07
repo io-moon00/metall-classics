@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Ebene_2" data-name="Ebene 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 62.7714 64.547997">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #FFF;
+      }
+    </style>
+    <linearGradient id="Dégradé_sans_nom_18" data-name="Dégradé sans nom 18" x1="13.557861" y1="11.139097" x2="49.103743" y2="53.50103" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#4d4d4d"/>
+      <stop offset="1" stop-color="#1a1a1a"/>
+    </linearGradient>
+  </defs>
+  <g id="Calque_187_-_copie" data-name="Calque 187 - copie">
+    <g id="Calque_4_-_copie" data-name="Calque 4 - copie">
+      <g id="Calque_86_-_copie" data-name="Calque 86 - copie">
+        <path class="cls-1" d="m2.7501,38.465097h22.3338v23.3328c0,1.5189,1.2313,2.7501,2.75,2.7501h7.1036c1.5187,0,2.75-1.2312,2.75-2.7501v-23.3328h22.3338c1.5187,0,2.7501-1.2312,2.7501-2.7501v-6.6591c0-1.5187-1.2314-2.7501-2.7501-2.7501h-22.3338V2.750097c0-1.518897-1.2313-2.750097-2.75-2.750097h-7.1036c-1.5187,0-2.75,1.2312-2.75,2.750097v23.5557H2.7501c-1.5187,0-2.7501,1.2314-2.7501,2.7501v6.6591c0,1.5189,1.2314,2.7501,2.7501,2.7501Z"/>
+      </g>
+    </g>
+  </g>
+</svg>

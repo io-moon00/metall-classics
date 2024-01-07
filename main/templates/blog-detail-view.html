@@ -1,5 +1,7 @@
 {% extends 'base.html' %}
 
+{% block page %}'blog'{% endblock %}
+
 {% block style %}
 <link rel="stylesheet" href="../static/style/blog.css">
 {% endblock %}
@@ -12,18 +14,24 @@
         <h2>{{ blog.title }}</h2>
         <div class="vertical_line"></div>
     </div>
-    <div class="page blog">
-        <div class="detail-text">
-            <div class="info">{{ blog.tag }} | {{ blog.date | date:"d.m.Y" }}</div>
+    <div class="page">
+        <div class="section detail-blog">
             <div class="detail-text">
-                {{ blog.text }}
+                <div class="info">{{ blog.tag }} | {{ blog.date | date:"d.m.Y" }}</div>
+                <div class="detail-text blocksatz">
+                    {{ blog.text }}
+                </div>
+            </div>
+            <div class="blog-gallery">
+                {% for img in images %}
+                <img src="{{ img.img.url }}" alt="{{ img.img_alt }}" onclick="openImg('{{ img.img.url }}')">
+                {% endfor %}
             </div>
         </div>
-        <div class="blog-gallery">
-            {% for img in images %}
-            <img src="{{ img.img.url }}" alt="{{ img.img_alt }}">
-            {% endfor %}
-        </div>
     </div>
+</div>
+<div id="image-container" class="image-container d-none">
+    <img onclick="closeImg()" class="close-cross" src="../../media/public/closeCross.svg" alt="close Cross">
+    <img id="detail-image" class="img-detail-view" src = "">
 </div>
 {% endblock %}

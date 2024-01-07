@@ -1,20 +1,33 @@
 .offers{
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 40px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 60px;
 }
 
 .offers img{
-    width: 60px;
+    height: 110px;
 }
 
 .offer{
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: 100%;
+    justify-content: space-between;
 }
 
-@media(max-width: 1050px){
+.offer-top{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.offer a{
+    margin-top: 30px;
+}
+
+
+@media(max-width: 800px){
     .offers{
         grid-template-columns: repeat(2, 1fr);
     }

@@ -6,9 +6,11 @@
         <div class="vertical_line"></div>
     </div>
     <div class="gallery-images">
-        <div><img src="../../../media/public/project1.png" alt=""></div>    
-        <div><img src="../../../media/public/project2.JPG" alt=""></div>
-        <div><img src="../../../media/public/DSC07207.JPG" alt=""></div>
+        {% for img in images %}
+        <div>
+            <img src="{{ img.img.url }}" alt="{{ img.img_alt }}">
+        </div>    
+        {% endfor %}
     </div>
     <div class="all-btn">
         <a class="section-btn" href="{% url 'gallery' %}">Gesamte Gallerie</a>

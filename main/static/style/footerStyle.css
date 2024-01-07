@@ -1,28 +1,44 @@
-.footer{
+footer{
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
-    height: 100px;
+    justify-content: center;
+    gap: 40px;
     background-color: #545454;
     color: white;
     padding-right: 10%;
     padding-left: 10%;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    height: 300px;
+}
+
+.legal{
+    list-style: none;
+    font-weight: 400;
+    text-align: center;
+    padding-inline-start: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
 }
 
 .legal a{
     text-decoration: none;
     color: white;
     margin-left: 10px;  
-    border-bottom: 2px solid transparent;
-    transition: border-bottom 225ms ease-in-out; 
+    transition: all 225ms ease-in-out; 
 }
 
+.madeby a{
+    color: #A300E0;
+    text-decoration: none;
+    transition: all 225ms ease-in-out; 
+}
+
+.madeby a:hover,
 .legal a:hover{
-    border-bottom: 2px solid white;
+    color: var(--main-color);
     transition: all 225ms ease-in-out;
 }
 
@@ -34,7 +50,6 @@
     }
 
     .legal a{
-        font-size: 12px;
         margin-top: 2px;
         margin-bottom: 2px;
     }

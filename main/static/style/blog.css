@@ -1,8 +1,7 @@
 .blogs{
     display: grid;
-    grid-template-columns: repeat(3, 32%);
-    column-gap: 10px;
-    justify-content: space-between;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
 }
 
 .blog{
@@ -10,7 +9,6 @@
     flex-direction: column;
     position: relative;
     padding-bottom: 50px;
-    width: 100%;
 }
 
 .blog img{
@@ -40,36 +38,88 @@
 
 .blog .text{
     color: var(--text-grey);
-    white-space: nowrap;
-	overflow: hidden;
-	text-overflow:ellipsis;
-    height: 30px;
-    max-width: 100%;
-
+    display: -webkit-box; 
+    -webkit-box-orient: vertical; 
+    -webkit-line-clamp: 2; 
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+    
+  
 }
 
 /* detail view */
 
+.detail-blog{
+    display: flex;
+    flex-direction: column;
+}
 
 
-.blog .detail-text{
+.detail-blog .detail-text{
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
 
-.blog .detail-text .info{
+.detail-blog .detail-text .info{
     text-align: end;
 }
 
 .blog-gallery{
     display: grid;
-    grid-template-columns: 47% 47%;
-    column-gap: 6%;
-    margin-top: 100px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    margin: 100px 0;
+}
+
+.blog-gallery img{
+    width: 100%;
 }
 
 .all-blogs{
-    display: flex;
     justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    margin-bottom: 100px;
+}
+
+@media(max-width: 1000px){
+    .all-blogs,
+    .blogs{
+        gap: 20px;
+    }
+
+}
+
+
+
+@media (max-width: 800px){
+    .blog-gallery,
+    .all-blogs,
+    .blogs{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .blog-gallery{
+        gap:20px
+    }
+
+    .blogs div:last-child{
+        display: none !important;
+    }
+}
+
+@media (max-width: 650px){
+    .blog-gallery{
+        gap:10px
+    }
+}
+
+@media(max-width: 440px){
+    .blog-gallery,
+    .all-blogs,
+    .blogs{
+        grid-template-columns: 1fr;
+    }
 }

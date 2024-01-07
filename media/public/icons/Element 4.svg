@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Ebene_2" data-name="Ebene 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 359.17 258.39">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #2e4d62;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 11.32px;
+      }
+
+      .cls-2 {
+        fill: #2d4d65;
+        stroke-width: 0px;
+      }
+    </style>
+  </defs>
+  <g id="Layer_1" data-name="Layer 1">
+    <g>
+      <g>
+        <g>
+          <path class="cls-1" d="M304.45,219.31h28.49c11.36,0,20.57-9.21,20.57-20.57v-51.47c0-5.31-1.64-10.48-4.7-14.82-8.75-12.41-32.15-34.85-89.54-41.99l-66.49-3.12L79.22,25.2c-16.69-8.08-34.99-12.27-53.54-12.27H5.66v206.38h137.53"/>
+          <circle class="cls-1" cx="224.35" cy="196.41" r="56.31" transform="translate(-58.09 100.81) rotate(-22.5)"/>
+          <line class="cls-1" x1="192.77" y1="87.35" x2="5.66" y2="87.35"/>
+          <path class="cls-1" d="M353.51,158.51h-38.7c-9.02,0-16.73-6.5-18.26-15.39h0c-1.95-11.32,6.77-21.67,18.26-21.67h24.15"/>
+          <circle class="cls-2" cx="224.35" cy="196.41" r="20.03" transform="translate(-58.09 100.81) rotate(-22.5)"/>
+        </g>
+        <line class="cls-1" x1="130.18" y1="185.96" x2="5.66" y2="185.96"/>
+      </g>
+      <path class="cls-1" d="M175.59,85.67l104.39-60.3c22.35-12.91,47.71-19.71,73.52-19.71h0"/>
+      <line class="cls-1" x1="281.01" y1="24.78" x2="290.34" y2="96.54"/>
+    </g>
+  </g>
+</svg>

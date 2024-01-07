@@ -5,6 +5,13 @@
         <div class="vertical_line"></div>
     </div>
     <div class="contact-content">
+        <div class="contact-form">
+            <form method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+                  <button class="primary-button" type="submit">Absenden</button>
+            </form>
+        </div>
         <div class="contact-info-container">
             <div class="contact-info">
                 <img src="../../../media/public/location-icon.svg" alt="location icon">
@@ -38,12 +45,6 @@
                 </div>
             </div>
         </div>
-        <div class="contact-form">
-            <form method="post">
-                {% csrf_token %}
-                {{ form.as_p }}
-                  <button class="primary-button" type="submit">Absenden</button>
-            </form>
-        </div>
+
     </div>
 </div>

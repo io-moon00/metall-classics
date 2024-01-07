@@ -2,9 +2,29 @@ let navbarBtn;
 let btnIcon;
 let navLinks;  
 
+let links = ['home', 'service', 'about', 'gallery', 'blog', 'contact']
 
-function init(){
+function resetLinks(){
+    for(i = 0; i > links.length; i++){
+        document.getElementById(links[i]).classList.remove('selected');
+    }
+}
+
+function selectPage(page){
+    try{
+        document.getElementById(page).classList.add('selected');
+    }
+    catch{
+
+    }
+    
+}
+
+
+function init(page){
     setHeaderElements();
+    resetLinks();
+    selectPage(page);
 }
 
 function setHeaderElements(){
@@ -26,4 +46,15 @@ document.onclick = function (e) {
         navLinks.classList.remove('open');
         document.getElementById('body').classList.remove('no-scroll');
     }
+}
+
+function closeImg(){
+    document.getElementById('image-container').classList.add('d-none');
+    document.getElementById('body').classList.remove('noscroll');
+}
+
+function openImg(imgUrl){
+    document.getElementById('body').classList.add('noscroll')
+    document.getElementById('image-container').classList.remove('d-none');
+    document.getElementById('detail-image').src = imgUrl;
 }

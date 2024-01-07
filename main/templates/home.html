@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 
+{% block page %}''{% endblock %}
 
 {% block style %}
 <link rel="stylesheet" href="../static/style/home.css">
@@ -11,9 +12,9 @@
 {% endblock %}
 
 {% block content %}
-<div class="bg1">
-    <h1 class="slogan">Dein Partner für Karosseriearbeiten an historischen Fahrzeugen</h1>
-    <div class="subtitle">Wir sind ein Familienbetrieb, der professionelle Autoreparaturen und -wartungen in einer freundlichen Atmosphäre anbietet.</div>
+<div class="bg1" style=" background-image: url({{ page.hero.url }}); background-position-x: {{ page.hori_position }}; background-position-y: {{ page.vert_position }};">
+    <h1 class="slogan">{{ page.title }}</h1>
+    <div class="subtitle">{{ page.text }}</div>
     <div class="buttons">
         <a class="primary-button" href="{% url 'home' %}#contact">Kontakt</a>
         <a class="secondary-button" href="{% url 'home' %}#about">Über mich</a>

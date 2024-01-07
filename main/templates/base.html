@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="../static/style/generalStyle.css">
     <link rel="stylesheet" href="https://use.typekit.net/kud5mgt.css">
     <link rel="stylesheet" href="../static/style/headerStyle.css">
+    <link rel="stylesheet" href="../static/style/footerStyle.css">
 
     <link rel="apple-touch-icon" sizes="180x180" href="../../media/public/favicon_io/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="../../media/public/favicon_io/favicon-32x32.png">
@@ -20,16 +21,19 @@
     
     <title>Metall Classics</title>
 </head>
-<body id="body" onload="init()">
+<body id="body" onload="init({% block page %}{% endblock %})">
     <header>
-        <img class="logo" src="../../media/public/Logo.svg" alt="Metall Classics Logo">
+        <a href="{% url 'home' %}">
+            <img class="logo" src="../../media/public/Logo.svg" alt="Metall Classics Logo">
+        </a>
         <nav>
             <div class="nav-links">
-                <a href="{% url 'home' %}#offer">Dienstleistungen</a>
-                <a href="{% url 'home' %}#about">Über mich</a>
-                <a href="{% url 'home' %}#gallery">Gallerie</a>
-                <a href="{% url 'home' %}#blog">Blog</a>
-                <a href="{% url 'home' %}#contact">Kontakt</a>
+                <a id="home" href="{% url 'home' %}">Home</a>
+                <a id="service" href="{% url 'home' %}#offer">Dienstleistungen</a>
+                <a id="about" href="{% url 'home' %}#about">Über mich</a>
+                <a id="gallery" href="{% url 'gallery' %}">Gallerie</a>
+                <a id="blog" href="{% url 'blog' %}">Blog</a>
+                <a id="contact" href="{% url 'home' %}#contact">Kontakt</a>
             </div>
             <div id="navbar-btn" onclick="toggleNavbar()" href="#">
                 <div id="btn-icon" class=""></div>
@@ -41,7 +45,13 @@
         {% endblock %} 
     </main>
     <footer>
-
+        <ul class="legal">
+            <li><a href="{% url 'impressum' %}">Impressum</a></li>
+            <li><a href="{% url 'legal' %}">Datenschutzerklärung</a></li>
+            <li><a href="/admin">Login</a></li>
+        </ul>
+        <div class="madeby">made by <a href="https://codecrusher.ch/">Codecrusher</a></div>
+        <div>© {{ year }} - Metall Classics</div>
     </footer>
 </body>
 </html>

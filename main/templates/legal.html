@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load markdown_extras %}
+
+{% block style %}
+<link rel="stylesheet" href="../static/style/legalStyle.css">
+{% endblock %}
+
+{% block content %}
+<div class="wrapper">
+    <img class="header-img" src="{{ page.hero.url }}" alt="{{ page.hero_alt }}" style="object-position-x: {{ page.hori_position }}; object-position-y: {{ page.vert_position }};">
+    <div class="title  page-title">
+        <div class="vertical_line"></div>
+        <h2>{{ page.title }}</h2>
+        <div class="vertical_line"></div>
+    </div>
+    <div class="page">
+        <div class="section">
+            <div class="text">
+                {{ page.text | convert_markdown | safe }}
+            </div>
+        </div>
+    </div> 
+    <div class="fullscreen-container"></div> 
+</div>
+{% endblock %}

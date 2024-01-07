@@ -1,15 +1,35 @@
-body{
-    margin: 0;
-    font-family: 'Roboto', sans-serif;
+.text{
+    color: var(--text-grey);
+    margin-bottom: 100px;
 }
 
-.wrapper{
-    position: absolute;
-    width: 100%;
-    min-height: calc(100vh - 304px);
-    padding-bottom: 100px;
+.text h3{
+    color: var(--main-color);
 }
 
-.content{
-    margin: 10% 20%;
+.text h2{
+    font-size: 20px;
+    hyphens: auto; 
+	text-align: left;
+}
+
+.text h3{
+    font-size: 18px;
+}
+
+.text a{
+    color: var(--main-color);
+    text-decoration: none;
+    transition: all 175ms ease-in-out;
+}
+
+.text a:hover{
+    cursor: pointer;
+    color: rgb(23, 81, 88);
+    transition: all 175ms ease-in-out;
+}
+
+.text p{
+    hyphens: auto; 
+    text-align: justify;
 }

@@ -1,9 +1,20 @@
 from django.contrib import admin
-from .models import Blog, BlogImage, BlogTag, GalleryImage, Partner, Offers, Testimonials, Section
+from .models import Blog, BlogImage, BlogTag, GalleryImage, Partner, Offer, Testimonial, Section, Page
 
 # Register your models here.
+class PageAdmin(admin.ModelAdmin):
+    readonly_fields = ['img_preview']
+    list_display = ['__str__','title', 'img_preview']
 
 class GalleryImageAdmin(admin.ModelAdmin):
+    readonly_fields = ['img_preview']
+    list_display = ['__str__', 'img_preview']
+
+class OffersAdmin(admin.ModelAdmin):
+    readonly_fields = ['img_preview']
+    list_display = ['__str__', 'img_preview']
+
+class PartnerAdmin(admin.ModelAdmin):
     readonly_fields = ['img_preview']
     list_display = ['__str__', 'img_preview']
 
@@ -26,3 +37,8 @@ class BlogImgAdmin(admin.ModelAdmin):
 
 admin.site.register(BlogTag)
 admin.site.register(GalleryImage, GalleryImageAdmin)
+admin.site.register(Offer, OffersAdmin)
+admin.site.register(Partner, PartnerAdmin)
+admin.site.register(Testimonial)
+admin.site.register(Section)
+admin.site.register(Page, PageAdmin)

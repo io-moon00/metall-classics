@@ -5,25 +5,15 @@
         <div class="vertical_line"></div>
     </div>
     <div class="offers">
+        {% for offer in offers %}
         <div class="offer">
-            <img src="../../../media/public/icon1.svg">
-            <h3>Carrosseriearbeiten</h3>
-            <div class="blocksatz">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book</div>
+            <div class="offer-top">
+                <img src="{{ offer.icon.url }}">
+                <h3>{{ offer.title }}</h3>
+                <div class="blocksatz">{{ offer.short_text }}</div>
+            </div>
+            <a class="primary-button" href="{% url 'home' %}#contact">Kontakt</a>
         </div>
-        <div class="offer">
-            <img src="../../../media/public/icon1.svg">
-            <h3>Carrosseriearbeiten</h3>
-            <div class="blocksatz">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book</div>
-        </div>
-        <div class="offer">
-            <img src="../../../media/public/icon1.svg">
-            <h3>Carrosseriearbeiten</h3>
-            <div class="blocksatz">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book</div>
-        </div>
-        <div class="offer">
-            <img src="../../../media/public/icon1.svg">
-            <h3>Carrosseriearbeiten</h3>
-            <div class="blocksatz">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book</div>
-        </div>
+        {% endfor %}
     </div>
 </div>

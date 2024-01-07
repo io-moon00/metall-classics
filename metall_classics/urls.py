@@ -17,7 +17,7 @@ from django.contrib import admin
 from django.urls import path
 from django.conf import settings
 from django.conf.urls.static import static
-from main.views import home, blog_detail, blog, gallery
+from main.views import home, blog_detail, blog, gallery, impressum, legal
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -25,6 +25,8 @@ urlpatterns = [
     path('gallery', gallery, name='gallery'),
     path('blog', blog, name='blog'),
     path('blog/<int:pk>', blog_detail, name='blog_detail'),
+    path('impressum', impressum, name='impressum'),
+    path('dataprotection', legal, name='legal'),
 ]
 
 if settings.DEBUG:

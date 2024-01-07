@@ -5,12 +5,15 @@ from django.core.mail import EmailMultiAlternatives
 from django.http import HttpResponseRedirect
 from forms.forms import ContactForm
 from django. conf import settings
-from .models import Blog, BlogImage, GalleryImage
+from .models import Blog, BlogImage, GalleryImage, Offer, Page
 # Create your views here.
 current_year = date.today().year
 
 def home(request):
     blogs = Blog.objects.filter(published = True)[:3]
+    offers = Offer.objects.all()
+    page = Page.objects.get(page = 'home')
+    images = GalleryImage.objects.all()[:4]
     submitted = False
     if request.method == 'POST':
         form = ContactForm(request.POST)
@@ -31,7 +34,13 @@ def home(request):
         form = ContactForm()
         if 'submitted' in request.GET:
             submitted = True
-    return render(request, 'home.html',{'form': form, 'year': current_year, 'submitted': submitted, 'blogs': blogs})
+    return render(request, 'home.html',{'form': form, 
+                                        'year': current_year, 
+                                        'submitted': submitted, 
+                                        'page': page,
+                                        'blogs': blogs, 
+                                        'images': images,
+                                        'offers': offers})
 
 
 def blog_detail(request, pk):
@@ -43,10 +52,19 @@ def blog_detail(request, pk):
 
 def blog(request):
     blogs = Blog.objects.filter(published = True)
-
-    return render(request, 'blog.html', {'year': current_year, 'blogs': blogs})
+    page = Page.objects.get(page='blog')
+    return render(request, 'blog.html', {'year': current_year, 'page':page, 'blogs': blogs})
 
 def gallery(request):
     images = GalleryImage.objects.all()
+    page = Page.objects.get(page='gallery')
 
-    return render(request, 'gallery.html', {'year': current_year, 'images': images})
+    return render(request, 'gallery.html', {'year': current_year, 'page':page, 'images': images})
+
+def impressum(request):
+    page = Page.objects.get(page='impressum')
+    return render(request, 'impressum.html', {'year': current_year, 'page':page})
+
+def legal(request):
+    page = Page.objects.get(page='dataprotection')
+    return render(request, 'legal.html', {'year': current_year, 'page':page})
