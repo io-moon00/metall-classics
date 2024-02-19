@@ -77,6 +77,8 @@ class Partner(models.Model):
     logo = models.ImageField(upload_to='uploads/partners')
     img_alt = models.CharField(max_length=40)
     link = models.URLField()     
+    text_color = ColorField(default = 'rgb(38, 134, 146)')
+    bg_color = ColorField(default = 'rgb(243, 243, 243)')
 
     def img_preview(self): 
         return mark_safe(f'<img src = "{self.logo.url}" width = "200"/>')

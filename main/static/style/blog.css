@@ -4,14 +4,14 @@
     gap: 40px;
 }
 
-.blog{
+.blog-div{
     display: flex;
     flex-direction: column;
     position: relative;
     padding-bottom: 50px;
 }
 
-.blog img{
+.blog-div img{
     width: 100%;
     margin-bottom: 20px;
 }
@@ -20,11 +20,11 @@
     color: var(--main-color);
 }
 
-.blog h4{
+.blog-div h4{
     margin-block-start: 4px;
 }
 
-.blog a{
+.blog-div a{
     color: var(--main-color);
     text-decoration: none;
     margin-top: 10px;
@@ -36,7 +36,7 @@
     bottom: 0;
 }
 
-.blog .text{
+.blog-div .text{
     color: var(--text-grey);
     display: -webkit-box; 
     -webkit-box-orient: vertical; 
@@ -105,7 +105,7 @@
         gap:20px
     }
 
-    .blogs div:last-child{
+    .blogs div:nth-child(4){
         display: none !important;
     }
 }

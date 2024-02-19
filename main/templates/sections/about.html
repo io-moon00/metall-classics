@@ -1,18 +1,15 @@
+{% load markdown_extras %}
 <div class="section">
     <div class="title">
         <div class="vertical_line"></div>
-        <h2>Über mich</h2>
+        <h2>{{ aboutsection.title }}</h2>
         <div class="vertical_line"></div>
     </div>
     <div class="about-content">
 
         <img src="../../../media/public/portrait.png" alt="Portrait">
         <div class="blocksatz">
-            Mit meiner Berufserfahrung von über 35 Jahren als Werkleiter der Carrosserie und Spenglerei konnte ich viel Erfahrung gewinnen. Schon in jungen Jahren faszinierten mich die schönen Formen der Oldtimer. Diese Faszination bewegte mich dazu einen Oldtimer von Grund auf zu restaureieren. Über 7 Jahre hinweg restaurierte ich in der Freizeit mit Leidenschaft und Durchhaltewillen meinen Austin Healey Baujahr 1958.
-
-Für mich stehen Qualität, Präzision und Optik im Zentrum. Herausforderungen meistere ich mit meinem handwerklichen Geschick, meinem Fachwissen und meiner Kreativität.
-
-Sie sind auf der Suche nach passenden (Carosserie-) Teilen für Ihr lieblings Fahrzeug und werden nicht fündig? Dann sind Sie bei mir genau richtig. Ich fertige Ihnen gerne eine individuelle Lösung.
+            {{ aboutsection.text | convert_markdown | safe }}
         </div>
     </div>
 </div>

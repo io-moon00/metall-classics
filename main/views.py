@@ -5,7 +5,7 @@ from django.core.mail import EmailMultiAlternatives
 from django.http import HttpResponseRedirect
 from forms.forms import ContactForm
 from django. conf import settings
-from .models import Blog, BlogImage, GalleryImage, Offer, Page
+from .models import Blog, BlogImage, GalleryImage, Offer, Page, Section, Partner
 # Create your views here.
 current_year = date.today().year
 
@@ -13,6 +13,8 @@ def home(request):
     blogs = Blog.objects.filter(published = True)[:3]
     offers = Offer.objects.all()
     page = Page.objects.get(page = 'home')
+    aboutsection = Section.objects.get(section='about')
+    partner = Partner.objects.all()
     images = GalleryImage.objects.all()[:4]
     submitted = False
     if request.method == 'POST':
@@ -40,7 +42,9 @@ def home(request):
                                         'page': page,
                                         'blogs': blogs, 
                                         'images': images,
-                                        'offers': offers})
+                                        'offers': offers,
+                                        'aboutsection': aboutsection,
+                                        'partner': partner})
 
 
 def blog_detail(request, pk):

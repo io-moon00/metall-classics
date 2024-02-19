@@ -7,7 +7,7 @@
     </div>
     <div class="blogs">
        {% for blog in blogs %}
-        <div class="blog">
+        <div class="blog-div">
             <img src="{{ blog.img.url }}" alt="{{ blog.img_alt }}">
             <div class="info">{{ blog.tag }} | {{ blog.date | date:"d.m.Y" }}</div>
             <h4>{{ blog.title }}</h4>

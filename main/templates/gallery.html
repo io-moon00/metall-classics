@@ -31,7 +31,10 @@
     </div> 
 </div>
 <div id="image-container" class="image-container d-none">
-    <img onclick="closeImg()" class="close-cross" src="../../media/public/closeCross.svg" alt="close Cross">
+    <div onclick="closeImg()" class="outer">
+        <div class="inner">
+        </div>
+      </div>
     <img id="detail-image" class="img-detail-view" src = "">
 </div>
 {% endblock %}

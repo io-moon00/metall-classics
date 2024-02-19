@@ -1,0 +1,15 @@
+<div class="section">
+    <div class="title">
+        <div class="vertical_line"></div>
+        <h2>Partner</h2>
+        <div class="vertical_line"></div>
+    </div>
+    <div class="partner">
+        {% for part in partner %}
+        <a href="{{ part.link }}">
+                <img style="background-color: {{ part.bg_color }};" src="{{ part.logo.url }}">
+                <h3 style="color: {{ part.text_color }};">{{ part.name }}</h3>
+        </a>
+        {% endfor %}
+    </div>
+</div>

@@ -2,29 +2,11 @@ let navbarBtn;
 let btnIcon;
 let navLinks;  
 
-let links = ['home', 'service', 'about', 'gallery', 'blog', 'contact']
-
-function resetLinks(){
-    for(i = 0; i > links.length; i++){
-        document.getElementById(links[i]).classList.remove('selected');
-    }
-}
-
-function selectPage(page){
-    try{
-        document.getElementById(page).classList.add('selected');
-    }
-    catch{
-
-    }
-    
-}
-
 
 function init(page){
     setHeaderElements();
-    resetLinks();
-    selectPage(page);
+    setActiveHeaderLinks(page);
+    scrollNav();
 }
 
 function setHeaderElements(){
@@ -57,4 +39,54 @@ function openImg(imgUrl){
     document.getElementById('body').classList.add('noscroll')
     document.getElementById('image-container').classList.remove('d-none');
     document.getElementById('detail-image').src = imgUrl;
+}
+
+function setActiveHeaderLinks(element){
+    const links = document.querySelectorAll('nav .nav-links a');
+    links.forEach(link => {
+        link.classList.remove('selected');
+        if(link.classList.contains(element)){
+            link.classList.add('selected')
+        }
+    })
+}
+
+function removeAllActiveClasses(){
+    const links = document.querySelectorAll('nav .nav-links a');
+    links.forEach(link => {
+        link.classList.remove('selected');
+    })
+}
+
+function scrollNav(){
+    let current = '';
+    const sections = document.querySelectorAll('.scroll-section');
+    let noScrollHeight = 0;
+    window.onreset = () =>{
+        noScrollHeight = 0;
+        const topSection = document.querySelectorAll('.no-scroll-section');
+        topSection.forEach(sec => {
+            noScrollHeight += sec.offsetHeight;
+        })
+    }
+
+    const topSection = document.querySelectorAll('.no-scroll-section');
+    topSection.forEach(sec => {
+        noScrollHeight += sec.offsetHeight;
+    })
+  
+    window.addEventListener('scroll', function(){
+        sections.forEach(sec => {
+            const sectionTop = sec.offsetTop;
+            scroll = window.scrollY * 1.3
+            if(scroll > sectionTop && scroll > noScrollHeight){
+                current = sec.getAttribute('id');
+                
+            }
+            else if(scroll < noScrollHeight){
+                current = ''
+            }
+        })
+        setActiveHeaderLinks(current);
+    })
 }

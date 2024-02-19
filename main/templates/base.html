@@ -28,12 +28,12 @@
         </a>
         <nav>
             <div class="nav-links">
-                <a id="home" href="{% url 'home' %}">Home</a>
-                <a id="service" href="{% url 'home' %}#offer">Dienstleistungen</a>
-                <a id="about" href="{% url 'home' %}#about">Über mich</a>
-                <a id="gallery" href="{% url 'gallery' %}">Gallerie</a>
-                <a id="blog" href="{% url 'blog' %}">Blog</a>
-                <a id="contact" href="{% url 'home' %}#contact">Kontakt</a>
+                <a class="home" id="home-link" href="{% url 'home' %}">Home</a>
+                <a class="service" id="service-link" href="{% url 'home' %}#service">Services</a>
+                <a class="about" id="about-link" href="{% url 'home' %}#about">Über mich</a>
+                <a class="gallery" id="gallery-link" href="{% url 'gallery' %}">Gallerie</a>
+                <a class="blog" id="blog-link" href="{% url 'blog' %}">Blog</a>
+                <a class="contact" id="contact-link" href="{% url 'home' %}#contact">Kontakt</a>
             </div>
             <div id="navbar-btn" onclick="toggleNavbar()" href="#">
                 <div id="btn-icon" class=""></div>

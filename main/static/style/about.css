@@ -17,3 +17,10 @@
         flex-direction: column-reverse;
     }
 }
+
+@media(max-width: 340px){
+    .about-content img{
+        width: 180px;
+        height: 180px;
+    }
+}

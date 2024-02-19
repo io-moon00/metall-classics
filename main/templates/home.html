@@ -9,10 +9,11 @@
 <link rel="stylesheet" href="../static/style/gallery.css">
 <link rel="stylesheet" href="../static/style/blog.css">
 <link rel="stylesheet" href="../static/style/contact.css">
+<link rel="stylesheet" href="../static/style/partner.css">
 {% endblock %}
 
 {% block content %}
-<div class="bg1" style=" background-image: url({{ page.hero.url }}); background-position-x: {{ page.hori_position }}; background-position-y: {{ page.vert_position }};">
+<div class="bg1 no-scroll-section" style=" background-image: url({{ page.hero.url }}); background-position-x: {{ page.hori_position }}; background-position-y: {{ page.vert_position }};">
     <h1 class="slogan">{{ page.title }}</h1>
     <div class="subtitle">{{ page.text }}</div>
     <div class="buttons">
@@ -21,10 +22,16 @@
     </div> 
 </div>
 <div class="sections">
-    <section id="offer">{% include 'sections/offer.html' %}</section>
-    <section id="about">{% include 'sections/about.html' %}</section>
-    <section id="gallery">{% include 'sections/gallery.html' %}</section>
-    <section id="blog">{% include 'sections/blog.html' %}</section>
-    <section id="contact">{% include 'sections/contact.html' %}</section>
+    <section class="scroll-section" id="service">{% include 'sections/offer.html' %}</section>
+    <section class="scroll-section" id="about">{% include 'sections/about.html' %}</section>
+    <section class="scroll-section" id="gallery">{% include 'sections/gallery.html' %}</section>
+    <section class="scroll-section" id="blog">{% include 'sections/blog.html' %}</section>
+    <section class="scroll-section" id="contact">{% include 'sections/contact.html' %}</section>
+    {% if partner %}
+    <section class="scroll-section" id="partner">{% include 'sections/partner.html' %}</section>
+    {% endif %}
+    {% if testimonials %}
+    <section class="scroll-section" id="testimonials">{% include 'sections/testimonials.html' %}</section>
+    {% endif %}
 </div>
 {% endblock %}
